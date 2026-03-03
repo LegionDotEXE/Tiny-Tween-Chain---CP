@@ -20,6 +20,8 @@ class Basics extends Phaser.Scene {
 
         // add sprites
         let tomato = this.add.sprite(centerX, centerY, 'fruitandveg', 'tomato')
+        let pear = this.add.sprite(64,64,'fruitandveg','pear')
+
 
         // add text
         this.instructionText = this.add.bitmapText(centerX, centerY, 'gem_font', '', 24).setOrigin(0.5)
