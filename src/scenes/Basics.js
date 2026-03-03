@@ -61,7 +61,7 @@ class Basics extends Phaser.Scene {
                    
                 },
                 {
-                    angle:90,
+                    angle:90,               // Angle Property Tween
                     duration:1000,
                     ease:'Linear',
                    
@@ -111,8 +111,6 @@ class Basics extends Phaser.Scene {
             pear.setPosition(64,64)
         })
         
-
-    
 
         // enable scene reload key
         this.reload = this.input.keyboard.addKey('R')
