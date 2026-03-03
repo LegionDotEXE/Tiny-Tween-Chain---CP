@@ -51,6 +51,69 @@ class Basics extends Phaser.Scene {
             }
         })
 
+        let pearTweenChain = this.tweens.chain({
+            targets:pear,
+            tweens:[
+                {
+                    x:w-64,
+                    duration:2000,
+                    ease:'Linear',
+                   
+                },
+                {
+                    angle:90,
+                    duration:1000,
+                    ease:'Linear',
+                   
+                },
+                {
+                    y:h-64,
+                    duration:2000,
+                    ease:'Linear',
+                   
+                },
+                {
+                    angle:180,
+                    duration:1000,
+                    ease:'Linear',
+                   
+                },
+                {
+                    x:64,
+                    duration:2000,
+                    ease:'Linear',
+                   
+                },
+                {
+                    angle:-90,
+                    duration:1000,
+                    ease:'Linear',
+                   
+                },
+                {
+                    y:64,
+                    duration:2000,
+                    ease:'Linear',
+                  
+                },
+                {
+                    angle:0,
+                    duration:1000,
+                    ease:'Linear',
+                   
+                },
+
+            ]
+
+        })
+
+        this.input.on('pointerdown',()=>{
+            pear.setPosition(64,64)
+        })
+        
+
+    
+
         // enable scene reload key
         this.reload = this.input.keyboard.addKey('R')
 
